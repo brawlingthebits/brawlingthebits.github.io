@@ -1,0 +1,114 @@
+body {
+    background-color: #302e49;
+    color: #fffff0
+}
+
+#hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: auto 0;
+    line-height: 1.2;
+}
+
+#hero-section h1, h2 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+#hero-section img {
+    width: 50vw;
+}
+
+#content-section {
+    margin: 0.5rem 1.5rem;
+    text-align: left;
+}
+
+#content-section h2 {
+    margin: 2.5rem auto;
+}
+
+#content-section h3, h4 {
+    margin: 0.5rem auto;
+}
+
+#content-section p {
+    margin: 1.5rem auto;
+}
+
+#content-section ul {
+    list-style: circle;
+}
+
+#content-section li {
+    margin: 0.5rem auto;
+}
+
+#tech-icons div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+#tech-icons img {
+    width: 2rem;
+    margin: 0.5rem;
+}
+
+#content-section a {
+    text-decoration: none;
+    color: #fffff0;
+}
+
+#content-section a:hover {
+    cursor: pointer;
+}
+
+#call-to-action {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#call-to-action img {
+    width: 2rem;
+    margin: 0.5rem;
+}
+
+@media (min-width: 767px) {
+
+    #hero-section img {
+        width: 25vw;
+    }
+
+    #content-section {
+        margin: 0.5rem 3.5rem;
+    }
+}
+
+@media (min-width: 1023px) {
+
+    #hero-section img {
+        width: 20vw;
+    }
+
+    #content-section {
+        margin: 0.5rem 5rem;
+    }
+}
+
+@media (min-width: 1279px) {
+
+    #hero-section img {
+        width: 15vw;
+    }
+
+    #content-section {
+        margin: 0.5rem 5rem;
+    }
+}
