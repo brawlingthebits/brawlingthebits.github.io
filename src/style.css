@@ -1,0 +1,253 @@
+/* Base styles */
+body {
+    background-color: #302e49;
+    color: #fffff0;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.header__title, .header__subtitle {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.header__image {
+    width: 50vw;
+}
+
+@media (min-width: 767px) {
+    .header__image {
+        width: 25vw;
+    }
+}
+
+@media (min-width: 1023px) {
+    .header__image {
+        width: 20vw;
+    }
+}
+
+@media (min-width: 1279px) {
+    .header__image {
+        width: 15vw;
+    }
+}
+
+/* Main content */
+.main-content {
+    margin: 0.5rem 1.5rem;
+    text-align: left;
+    font-size: 1rem; /* Default font size */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 767px) {
+    .main-content {
+        margin: 0.5rem 3.5rem;
+    }
+}
+
+@media (min-width: 1023px) {
+    .main-content {
+        margin: 0.5rem 5rem;
+    }
+}
+
+/* About section */
+.about__title {
+    margin: 2.5rem auto;
+}
+
+.about__description {
+    margin: 1.5rem auto;
+}
+
+/* Experience section */
+.experience__title, .experience__company, .experience__duration {
+    margin: 2.5rem auto;
+}
+
+.experience__description {
+    margin: 1.5rem auto;
+}
+
+.experience__list {
+    list-style: circle;
+}
+
+.experience__list-item {
+    margin: 0.5rem auto;
+}
+
+/* Tech stack section */
+.tech-stack__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tech-stack__icon {
+    width: 2rem;
+    margin: 0.5rem;
+}
+
+/* Education section */
+.education__resources {
+    list-style: none;
+    padding: 0;
+}
+
+.education__resource-item {
+    margin: 0.5rem auto;
+}
+
+.education__resource-item a {
+    text-decoration: none;
+    color: #fffff0;
+}
+
+.education__resource-item a:hover {
+    cursor: pointer;
+}
+
+/* Contact section */
+.contact__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contact__link img {
+    width: 2rem;
+    margin: 0.5rem;
+}
+
+/* Control sidebar */
+.control-sidebar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #403e59;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.control-sidebar__label {
+    color: #fffff0;
+    margin: 0.5rem 0;
+}
+
+.control-sidebar__slider {
+    width: 100px;
+    margin: 0.5rem 0;
+}
+
+.control-sidebar__close {
+    background: none;
+    border: none;
+    color: #fffff0;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.control-sidebar__open {
+    position: fixed;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #403e59;
+    border: none;
+    color: #fffff0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+    display: none;
+}
+
+/* Footer */
+.footer {
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__text {
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem; /* Adjust as needed */
+}
+
+.footer__logo {
+    width: 10rem; /* 5rem for larger size */
+    height: auto;
+}
+
+.footer__link {
+    text-decoration: none;
+}
+
+@media (min-width: 767px) {
+    .header__image {
+        width: 25vw;
+    }
+
+    .main-content {
+        margin: 0.5rem 3.5rem;
+    }
+}
+
+@media (min-width: 1023px) {
+    .header__image {
+        width: 20vw;
+    }
+
+    .main-content {
+        margin: 0.5rem 5rem;
+    }
+}
+
+@media (min-width: 1279px) {
+    .header__image {
+        width: 15vw;
+    }
+
+    .main-content {
+        margin: 0.5rem 5rem;
+    }
+}
