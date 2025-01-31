@@ -1,0 +1,26 @@
+.nav-language-select {
+    background: transparent;
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 240, 0.2);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.nav-language-select:hover {
+    border-color: rgba(255, 255, 240, 0.4);
+}
+
+.nav-blog-link {
+    font-family: var(--font-pixel);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: opacity 0.2s;
+}
+
+.nav-blog-link:hover {
+    opacity: 0.8;
+}
