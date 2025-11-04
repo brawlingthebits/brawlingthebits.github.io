@@ -3,6 +3,9 @@
     --text-color: #fffff0;
     --font-mono: 'Roboto Mono', monospace;
     --font-pixel: 'Press Start 2P', cursive;
+    --pink: #ff66c4;
+    --yellow: #ffcc00;
+    --purple: #6c5ce7;
 }
 
 body {
@@ -15,4 +18,30 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+/* Custom scrollbar - retro theme */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--pink) rgba(108, 92, 231, 0.2);
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(108, 92, 231, 0.2);
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--pink);
+    border-radius: 5px;
+    border: 2px solid rgba(108, 92, 231, 0.2);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: var(--yellow);
 }
