@@ -1,0 +1,40 @@
+{
+    "posts":[
+        {
+            "id":"BD-AP3-2025.1-q5-q8",
+            "date":"2025-11-01",
+            "title":{
+                "en":"Normalization and Integrity: How to Prevent Database Anomalies and Fraud",
+                "pt-br":"Normalização e Integridade: Como Prevenir Anomalias e Fraudes no Banco"
+            },
+            "excerpt":{
+                "en":"How poor normalization and unprotected aggregations can expose your system to fraud, inconsistencies, and sophisticated attacks...",
+                "pt-br":"Como normalização inadequada e agregações mal protegidas podem expor seu sistema a fraudes, inconsistências e ataques sofisticados..."
+            }
+        },
+        {
+            "id":"BD-AP3-2025.1-q2-q4",
+            "date":"2025-11-01",
+            "title":{
+                "en":"The Deadly Trio: UPDATE, DELETE and SELECT That Can Destroy Your Database",
+                "pt-br":"O Trio Mortal: UPDATE, DELETE e SELECT que Podem Destruir Seu Banco"
+            },
+            "excerpt":{
+                "en":"Seemingly innocent UPDATE, DELETE and SELECT operations can become devastating attack vectors. A misplaced comma can delete your entire database...",
+                "pt-br":"Operações aparentemente inocentes de UPDATE, DELETE e SELECT podem se transformar em vetores de ataque devastadores. Uma vírgula no lugar errado pode deletar seu banco inteiro..."
+            }
+        },
+        {
+            "id":"BD-AP3-2025.1-q1",
+            "date":"2025-11-01",
+            "title":{
+                "en":"Schema Design = Security Design: Lessons from UFF's DataBase AP3 2025.1",
+                "pt-br":"Schema Design = Security Design: Lições da AP3 2025.1 de Bancos de Dados"
+            },
+            "excerpt":{
+                "en":"How you design SQL tables can decide whether your system stays safe or leaks crown-jewel data. A data security playbook from UFF's AP3...",
+                "pt-br":"A forma como você cria tabelas SQL pode ser a diferença entre um sistema seguro e um vazamento milionário. Um guia de segurança de dados da AP3 UFF..."
+            }
+        }
+    ]
+}

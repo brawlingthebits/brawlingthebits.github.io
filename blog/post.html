@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Blog post">
+        <meta name="theme-color" content="#302e49">
+        <link rel="icon" type="image/x-icon" href="../src/favicon/favicon.ico">
+        <link rel="stylesheet" href="../src/css/reset.css">
+        <link rel="stylesheet" href="../src/css/base.css">
+        <link rel="stylesheet" href="../src/css/layout.css">
+        <link rel="stylesheet" href="../src/css/components.css">
+        <link rel="stylesheet" href="../src/css/sections.css">
+        <link rel="stylesheet" href="../src/css/responsive.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <!-- Marked.js for Markdown parsing -->
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <title>Loading...</title>
+        <style>
+            /* Override navbar fixed positioning for post pages */
+            .nav-bar {
+            position: relative;
+            padding: 1rem 2rem;
+            }
+            .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            }
+            .post-content h1 {
+            color: #ffcc00;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            line-height: 1.3;
+            }
+            .post-meta {
+            color: #ff66c4;
+            margin-bottom: 2rem;
+            font-style: italic;
+            }
+            .post-content h2 {
+            color: #ff66c4;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            }
+            .post-content h3 {
+            color: #6c5ce7;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+            }
+            .post-content p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            }
+            .post-content code {
+            background: rgba(108, 92, 231, 0.2);
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Roboto Mono', monospace;
+            }
+            .post-content pre {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin-bottom: 1rem;
+            border-left: 3px solid #ffcc00;
+            }
+            .post-content pre code {
+            background: none;
+            padding: 0;
+            }
+            .post-content a {
+            color: #ff66c4;
+            text-decoration: underline;
+            }
+            .post-content a:hover {
+            color: #ffcc00;
+            }
+            .post-content blockquote {
+            border-left: 3px solid #6c5ce7;
+            padding-left: 1rem;
+            margin-left: 0;
+            font-style: italic;
+            color: #b8b8d1;
+            }
+            .post-content ul, .post-content ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            }
+            .post-content li {
+            margin-bottom: 0.5rem;
+            }
+            .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            }
+            .back-link:hover {
+            color: #ff66c4;
+            }
+            .error-message {
+            color: #ff6b6b;
+            text-align: center;
+            padding: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <select class="nav-language-select" id="language-select" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="pt-br">Português</option>
+                </select>
+                <a href="/blog.html" class="nav-blog-link">BLOG</a>
+                <a href="/" class="nav-blog-link">HOME</a>
+            </div>
+        </nav>
+        <main class="main-content">
+            <div class="post-content">
+                <a href="/blog.html" class="back-link">← Back to Blog</a>
+                <div id="post-container">
+                    <p style="text-align: center;">Loading post...</p>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__content">
+                <p class="footer__text">© 2025 Brawling the Bits</p>
+            </div>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', async () => {
+                const languageSelect = document.getElementById('language-select');
+                const postContainer = document.getElementById('post-container');
+                
+                // Get language preference
+                const savedLang = localStorage.getItem('language') || 'en';
+                languageSelect.value = savedLang;
+                document.documentElement.lang = savedLang;
+                
+                // Get post ID from URL parameter
+                const urlParams = new URLSearchParams(window.location.search);
+                const postId = urlParams.get('id');
+                
+                if (!postId) {
+                    postContainer.innerHTML = '<p class="error-message">No post specified.</p>';
+                    return;
+                }
+                
+                try {
+                    // Fetch the index to get post metadata (post.html is in blog/ directory)
+                    const indexResponse = await fetch('./index.json');
+                    const indexData = await indexResponse.json();
+                    const post = indexData.posts.find(p => p.id === postId);
+                    
+                    if (!post) {
+                        throw new Error('Post not found');
+                    }
+                    
+                    // Set page title
+                    document.title = post.title[savedLang] || post.title.en;
+                    
+                    // Fetch the markdown file based on language
+                    const mdFile = savedLang === 'pt-br' ? `${postId}-pt.md` : `${postId}-en.md`;
+                    const mdResponse = await fetch(`./posts/${mdFile}`);
+                    if (!mdResponse.ok) {
+                        throw new Error('Markdown file not found');
+                    }
+                    
+                    const markdownText = await mdResponse.text();
+                    
+                    // Parse and render markdown
+                    const htmlContent = marked.parse(markdownText);
+                    
+                    // Build post HTML
+                    const date = new Date(post.date).toLocaleDateString(
+                        savedLang === 'pt-br' ? 'pt-BR' : 'en-US',
+                        { year: 'numeric', month: 'long', day: 'numeric' }
+                    );
+                    
+                    postContainer.innerHTML = `
+                        <h1>${post.title[savedLang] || post.title.en}</h1>
+                        <div class="post-meta">${date}</div>
+                        <div class="markdown-content">${htmlContent}</div>
+                    `;
+                    
+                } catch (error) {
+                    console.error('Error loading post:', error);
+                    postContainer.innerHTML = '<p class="error-message">Error loading post. Please try again later.</p>';
+                }
+                
+                languageSelect.addEventListener('change', (e) => {
+                    localStorage.setItem('language', e.target.value);
+                    location.reload();
+                });
+            });
+        </script>
+    </body>
+</html>
