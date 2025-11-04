@@ -1,181 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog posts about software development and cybersecurity">
-    <meta name="theme-color" content="#302e49">
-    <link rel="icon" type="image/x-icon" href="../src/favicon/favicon.ico">
-    <link rel="stylesheet" href="../src/css/reset.css">
-    <link rel="stylesheet" href="../src/css/base.css">
-    <link rel="stylesheet" href="../src/css/layout.css">
-    <link rel="stylesheet" href="../src/css/components.css">
-    <link rel="stylesheet" href="../src/css/sections.css">
-    <link rel="stylesheet" href="../src/css/responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <title>Blogging the Bits</title>
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="nav-bar">
-        <div class="nav-container">
-            <select class="nav-language-select" id="language-select" aria-label="Select language">
-                <option value="en">English</option>
-                <option value="pt-br">Português</option>
-            </select>
-
-            <a href="/" class="nav-blog-link">HOME</a>
-        </div>
-    </nav>
-
-    <main class="main-content">
-        <h1 class="header__title" data-translate="blogTitle"></h1>
-        
-        <div id="blog-grid" class="blog-grid">
-            <!-- Posts will be dynamically inserted here -->
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer__content">
-            <p class="footer__text" data-translate="footer"></p>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const languageSelect = document.getElementById('language-select');
-            const blogGrid = document.getElementById('blog-grid');
-
-            // Basic translations (only for static UI elements)
-            const translations = {
-                en: {
-                    blogTitle: "Blog Posts",
-                    readMore: "Read More →",
-                    footer: "© 2025 Brawling the Bits",
-                    noPosts: "No posts available at the moment.",
-                    loadError: "Unable to load blog posts. Please try again later."
-                },
-                'pt-br': {
-                    blogTitle: "Posts do Blog",
-                    readMore: "Leia Mais →",
-                    footer: "© 2025 Brawling the Bits",
-                    noPosts: "Nenhum post disponível no momento.",
-                    loadError: "Não foi possível carregar os posts. Por favor, tente novamente mais tarde."
-                }
-            };
-
-            // Development mode posts (fallback content)
-            const devPosts = {
-                posts: [
-                    {
-                        id: "dev-1",
-                        url: "#",
-                        date: "2025-01-30",
-                        title: {
-                            en: "Development Post 1",
-                            "pt-br": "Post de Desenvolvimento 1"
-                        },
-                        excerpt: {
-                            en: "This is a development mode post...",
-                            "pt-br": "Este é um post do modo de desenvolvimento..."
-                        },
-                        tags: ["dev"]
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Blog posts about software development and cybersecurity">
+        <meta name="theme-color" content="#302e49">
+        <link rel="icon" type="image/x-icon" href="../src/favicon/favicon.ico">
+        <link rel="stylesheet" href="../src/css/reset.css">
+        <link rel="stylesheet" href="../src/css/base.css">
+        <link rel="stylesheet" href="../src/css/layout.css">
+        <link rel="stylesheet" href="../src/css/components.css">
+        <link rel="stylesheet" href="../src/css/sections.css">
+        <link rel="stylesheet" href="../src/css/responsive.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <title>Blogging the Bits</title>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <select class="nav-language-select" id="language-select" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="pt-br">Português</option>
+                </select>
+                <a href="/" class="nav-blog-link">HOME</a>
+            </div>
+        </nav>
+        <main class="main-content">
+            <h1 class="header__title" data-translate="blogTitle"></h1>
+            <div id="blog-grid" class="blog-grid">
+                <!-- Posts will be dynamically inserted here -->
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__content">
+                <p class="footer__text" data-translate="footer"></p>
+            </div>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const languageSelect = document.getElementById('language-select');
+                const blogGrid = document.getElementById('blog-grid');
+            
+                const translations = {
+                    en: {
+                        blogTitle: "Blog Posts",
+                        readMore: "Read More →",
+                        footer: "© 2025 Brawling the Bits",
+                        noPosts: "No posts available at the moment.",
+                        loadError: "Unable to load blog posts. Please try again later."
+                    },
+                    'pt-br': {
+                        blogTitle: "Posts do Blog",
+                        readMore: "Leia Mais →",
+                        footer: "© 2025 Brawling the Bits",
+                        noPosts: "Nenhum post disponível no momento.",
+                        loadError: "Não foi possível carregar os posts. Por favor, tente novamente mais tarde."
                     }
-                ]
-            };
-
-            // Function to load blog posts
-            // Function to load blog posts
-            async function loadBlogPosts() {
-                try {
-                    // Try to fetch the local index.json from the posts directory
-                    const response = await fetch('./posts/index.json');
-                    console.log('Attempting to fetch posts...');
-                    
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
+                };
+            
+                async function loadBlogPosts() {
+                    try {
+                        // Fetch from blog/index.json (blog.html is at root level)
+                        const response = await fetch('blog/index.json');
+                        console.log('Fetching posts from blog/index.json...');
+                        
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        
+                        const data = await response.json();
+                        console.log('Loaded posts data:', data);
+                        
+                        if (!data.posts || !Array.isArray(data.posts)) {
+                            throw new Error('Invalid posts data structure');
+                        }
+                        
+                        displayPosts(data.posts);
+                    } catch (error) {
+                        console.error('Error loading blog posts:', error);
+                        const currentLang = languageSelect.value;
+                        blogGrid.innerHTML = `<p class="blog-grid__message">${translations[currentLang].loadError}</p>`;
                     }
-                    
-                    const data = await response.json();
-                    console.log('Loaded posts:', data); // Debug log
-                    displayPosts(data.posts);
-                } catch (error) {
-                    console.error('Error loading blog posts:', error);
-                    
-                    // Show error message in current language
-                    const currentLang = languageSelect.value;
-                    blogGrid.innerHTML = `<p class="blog-grid__message">${translations[currentLang].loadError}</p>`;
                 }
-            }
-
-            // Function to display posts
-            function displayPosts(posts) {
-                if (!posts || posts.length === 0) {
-                    const currentLang = languageSelect.value;
-                    blogGrid.innerHTML = `<p class="blog-grid__message">${translations[currentLang].noPosts}</p>`;
-                    return;
+            
+                function displayPosts(posts) {
+                    if (!posts || posts.length === 0) {
+                        const currentLang = languageSelect.value;
+                        blogGrid.innerHTML = `<p class="blog-grid__message">${translations[currentLang].noPosts}</p>`;
+                        return;
+                    }
+            
+                    blogGrid.innerHTML = '';
+                    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+                    
+                    posts.forEach(post => {
+                        const currentLang = languageSelect.value;
+                        const postElement = createPostElement(post, currentLang);
+                        blogGrid.appendChild(postElement);
+                    });
                 }
-
-                // Clear existing posts
-                blogGrid.innerHTML = '';
-                
-                // Sort posts by date (newest first)
-                posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-                
-                // Create post elements
-                posts.forEach(post => {
-                    const currentLang = languageSelect.value;
-                    const postElement = createPostElement(post, currentLang);
-                    blogGrid.appendChild(postElement);
+            
+                function createPostElement(post, lang) {
+                    const article = document.createElement('article');
+                    article.className = 'blog-post';
+                    
+                    const title = post.title[lang] || post.title.en;
+                    const excerpt = post.excerpt[lang] || post.excerpt.en;
+                    const date = new Date(post.date).toLocaleDateString(
+                        lang === 'pt-br' ? 'pt-BR' : 'en-US',
+                        { year: 'numeric', month: 'long', day: 'numeric' }
+                    );
+            
+                    article.innerHTML = `
+                        <h2 class="blog-post__title">${title}</h2>
+                        <div class="blog-post__date">${date}</div>
+                        <p class="blog-post__excerpt">${excerpt}</p>
+                        <a href="blog/post.html?id=${post.id}" class="blog-post__link">${translations[lang].readMore}</a>
+                    `;
+            
+                    return article;
+                }
+            
+                function updateLanguage(lang) {
+                    document.documentElement.lang = lang;
+                    document.querySelectorAll('[data-translate]').forEach(element => {
+                        const key = element.getAttribute('data-translate');
+                        if (translations[lang] && translations[lang][key]) {
+                            element.innerHTML = translations[lang][key];
+                        }
+                    });
+                    localStorage.setItem('language', lang);
+                    loadBlogPosts();
+                }
+            
+                languageSelect.addEventListener('change', (e) => {
+                    updateLanguage(e.target.value);
                 });
-            }
-
-            // Function to create a post element
-            function createPostElement(post, lang) {
-                const article = document.createElement('article');
-                article.className = 'blog-post';
-                
-                const title = post.title[lang] || post.title.en; // Fallback to English
-                const excerpt = post.excerpt[lang] || post.excerpt.en;
-                const date = new Date(post.date).toLocaleDateString(
-                    lang === 'pt-br' ? 'pt-BR' : 'en-US',
-                    { year: 'numeric', month: 'long', day: 'numeric' }
-                );
-
-                article.innerHTML = `
-                    <h2 class="blog-post__title">${title}</h2>
-                    <div class="blog-post__date">${date}</div>
-                    <p class="blog-post__excerpt">${excerpt}</p>
-                    <a href="${post.url}" class="blog-post__link">${translations[lang].readMore}</a>
-                `;
-
-                return article;
-            }
-
-            function updateLanguage(lang) {
-                document.documentElement.lang = lang;
-                document.querySelectorAll('[data-translate]').forEach(element => {
-                    const key = element.getAttribute('data-translate');
-                    if (translations[lang] && translations[lang][key]) {
-                        element.innerHTML = translations[lang][key];
-                    }
-                });
-                localStorage.setItem('language', lang);
-                loadBlogPosts(); // Reload posts with new language
-            }
-
-            languageSelect.addEventListener('change', (e) => {
-                updateLanguage(e.target.value);
+            
+                const savedLang = localStorage.getItem('language') || 'en';
+                languageSelect.value = savedLang;
+                updateLanguage(savedLang);
             });
-
-            // Load preferences and posts on page load
-            const savedLang = localStorage.getItem('language') || 'en';
-            languageSelect.value = savedLang;
-            updateLanguage(savedLang);
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>
