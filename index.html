@@ -1,198 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Beatriz Costa - Software Developer and Cybersecurity Researcher">
-    <meta name="theme-color" content="#302e49">
-    <link rel="icon" type="image/x-icon" href="./src/favicon/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="./src/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./src/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./src/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./src/favicon/site.webmanifest">
-    <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/css/base.css">
-    <link rel="stylesheet" href="src/css/layout.css">
-    <link rel="stylesheet" href="src/css/components.css">
-    <link rel="stylesheet" href="src/css/sections.css">
-    <link rel="stylesheet" href="src/css/responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <title>Beatriz Costa</title>
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="nav-bar">
-        <div class="nav-container">
-            <select class="nav-language-select" id="language-select" aria-label="Select language">
-                <option value="en">English</option>
-                <option value="pt-br">Português</option>
-            </select>
-
-            <a href="/blog.html" class="nav-blog-link">BLOG</a>
-        </div>
-    </nav>
-
-    <header class="header">
-        <h1 class="header__title" data-translate="greeting"></h1>
-        <h2 class="header__subtitle" data-translate="intro"></h2>
-        <div class="header__images-container">
-            <img class="header__image" src="./src/assets/jotaro.png" alt="Jotaro">
-            <img class="header__image" src="./src/assets/to_be_continued.png" alt="To Be Continued">
-        </div>
-    </header>
-
-    <main class="main-content">
-        <section class="about" id="about">
-            <h2 class="about__title" data-translate="aboutTitle"></h2>
-            <p class="about__description" data-translate="aboutText"></p>
-        </section>
-
-        <section class="experience" id="experience">
-            <h2 class="experience__title" data-translate="experienceTitle"></h2>
-            
-            <article class="experience__item">
-                <h3 class="experience__company">Safety Cybersecurity Inc.</h3>
-                <h4 class="experience__duration">Sep. 2022 - <span data-translate="experienceCurrent"></span></h4>
-                <p class="experience__description">
-                    <span data-translate="experienceIntro"></span>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Portfolio of Beatriz Costa - Software Developer and Cybersecurity Researcher">
+        <meta name="theme-color" content="#302e49">
+        <link rel="icon" type="image/x-icon" href="./src/favicon/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="./src/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./src/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./src/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./src/favicon/site.webmanifest">
+        <link rel="stylesheet" href="src/css/reset.css">
+        <link rel="stylesheet" href="src/css/base.css">
+        <link rel="stylesheet" href="src/css/layout.css">
+        <link rel="stylesheet" href="src/css/components.css">
+        <link rel="stylesheet" href="src/css/sections.css">
+        <link rel="stylesheet" href="src/css/responsive.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        <title>Beatriz Costa</title>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <select class="nav-language-select" id="language-select" aria-label="Select language">
+                    <option value="en">English</option>
+                    <option value="pt-br">Português</option>
+                </select>
+                <a href="/blog.html" class="nav-blog-link">BLOG</a>
+            </div>
+        </nav>
+        <header class="header">
+            <h1 class="header__title" data-translate="greeting"></h1>
+            <h2 class="header__subtitle" data-translate="intro"></h2>
+            <div class="header__images-container">
+                <img class="header__image" src="./src/assets/jotaro.png" alt="Jotaro">
+                <img class="header__image" src="./src/assets/to_be_continued.png" alt="To Be Continued">
+            </div>
+        </header>
+        <main class="main-content">
+            <section class="about" id="about">
+                <h2 class="about__title" data-translate="aboutTitle"></h2>
+                <p class="about__description" data-translate="aboutText"></p>
+            </section>
+            <section class="experience" id="experience">
+                <h2 class="experience__title" data-translate="experienceTitle"></h2>
+                <article class="experience__item">
+                    <h3 class="experience__company">Safety Cybersecurity Inc.</h3>
+                    <h4 class="experience__duration">Sep. 2022 - <span data-translate="experienceCurrent"></span></h4>
+                    <p class="experience__description">
+                        <span data-translate="experienceIntro"></span>
                     <h4 data-translate="experienceRole2"></h4>
                     <p data-translate="experienceRole2Description"></p>
                     <h4 data-translate="experienceRole1"></h4>
                     <p data-translate="experienceRole1Description"></p>
-                </p>
-            </article>
-        </section>
-
-        <section class="tech-stack" id="tech-stack">
-            <h2 class="tech-stack__title" data-translate="stackTitle"></h2>
-            <div class="tech-stack__icons">
-                <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" alt="Git">
-                <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="HTML5">
-                <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt="CSS3">
-                <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" alt="Python">
-                <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask">
-                <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
-                <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js">
-                <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
-                <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" alt="PostgreSQL">
-                <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" alt="Docker">
-                <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-plain.svg" alt="Google Cloud">
+                    </p>
+                </article>
+            </section>
+            <section class="tech-stack" id="tech-stack">
+                <h2 class="tech-stack__title" data-translate="stackTitle"></h2>
+                <div class="tech-stack__icons">
+                    <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" alt="Git">
+                    <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" alt="HTML5">
+                    <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" alt="CSS3">
+                    <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" alt="Python">
+                    <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask">
+                    <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django">
+                    <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js">
+                    <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                    <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg" alt="PostgreSQL">
+                    <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" alt="Docker">
+                    <img class="tech-stack__icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-plain.svg" alt="Google Cloud">
+                </div>
+            </section>
+            <section class="education" id="education">
+                <h2 class="education__title" data-translate="educationTitle"></h2>
+                <p class="education__description" data-translate="educationText1"></p>
+                <p class="education__description" data-translate="educationText2"></p>
+                <p class="education__description" data-translate="educationText3"></p>
+                <ul class="education__resources">
+                    <li class="education__resource-item"><a href="https://teachyourselfcs.com/">Teach Yourself Computer Science</a></li>
+                    <li class="education__resource-item"><a href="https://roadmap.sh/backend">Backend Developer Roadmap</a></li>
+                    <li class="education__resource-item"><a href="https://roadmap.sh/cyber-security">Cybersecurity Expert Roadmap</a></li>
+                </ul>
+            </section>
+            <section class="about" id="about-brawling-the-bits">
+                <h2 class="about__title" data-translate="whyTitle"></h2>
+                <p class="about__description" data-translate="whyText"></p>
+            </section>
+            <section class="contact" id="contact">
+                <h2 class="contact__title" data-translate="contactTitle"></h2>
+                <div class="contact__links">
+                    <a href="mailto:devbcdc@proton.me" target="_blank" class="contact__link"><img src="./src/assets/icons8-mail-48.png" alt="Email"></a>
+                    <a href="https://www.github.com/brawlingthebits" target="_blank" class="contact__link"><img src="./src/assets/icons8-github-48.png" alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/dev-bcdc/" target="_blank" class="contact__link"><img src="./src/assets/icons8-linkedin-circundado-48.png" alt="LinkedIn"></a>
+                    <a href="https://www.discordapp.com/users/1115976120932778094" target="_blank" class="contact__link"><img src="./src/assets/icons8-logo-discord-48.png" alt="Discord"></a>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__content">
+                <p class="footer__text" data-translate="footer"></p>
             </div>
-        </section>
-
-        <section class="education" id="education">
-            <h2 class="education__title" data-translate="educationTitle"></h2>
-            <p class="education__description" data-translate="educationText1"></p>
-            <p class="education__description" data-translate="educationText2"></p>
-            <p class="education__description" data-translate="educationText3"></p>
-            <ul class="education__resources">
-                <li class="education__resource-item"><a href="https://teachyourselfcs.com/">Teach Yourself Computer Science</a></li>
-                <li class="education__resource-item"><a href="https://roadmap.sh/backend">Backend Developer Roadmap</a></li>
-                <li class="education__resource-item"><a href="https://roadmap.sh/cyber-security">Cybersecurity Expert Roadmap</a></li>
-            </ul>
-        </section>
-
-        <section class="about" id="about-brawling-the-bits">
-            <h2 class="about__title" data-translate="whyTitle"></h2>
-            <p class="about__description" data-translate="whyText"></p>
-        </section>
-
-        <section class="contact" id="contact">
-            <h2 class="contact__title" data-translate="contactTitle"></h2>
-            <div class="contact__links">
-                <a href="mailto:devbcdc@proton.me" target="_blank" class="contact__link"><img src="./src/assets/icons8-mail-48.png" alt="Email"></a>
-                <a href="https://www.github.com/brawlingthebits" target="_blank" class="contact__link"><img src="./src/assets/icons8-github-48.png" alt="GitHub"></a>
-                <a href="https://www.linkedin.com/in/dev-bcdc/" target="_blank" class="contact__link"><img src="./src/assets/icons8-linkedin-circundado-48.png" alt="LinkedIn"></a>
-                <a href="https://www.discordapp.com/users/1115976120932778094" target="_blank" class="contact__link"><img src="./src/assets/icons8-logo-discord-48.png" alt="Discord"></a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer__content">
-            <p class="footer__text" data-translate="footer"></p>
-        </div>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const languageSelect = document.getElementById('language-select');
-
-            // Load saved language preference
-            function loadPreferences() {
-                const savedLang = localStorage.getItem('language') || 'en';
-                languageSelect.value = savedLang;
-                updateLanguage(savedLang);
-            }
-
-            const translations = {
-                en: {
-                    greeting: "Hi, how are you?",
-                    intro: "I am brawling the bits!",
-                    aboutTitle: "About me",
-                    aboutText: "Hi! I'm Beatriz, born in 2000 – part Gen Z, part Millennial at heart. I grew up during the evolution of personal computing, from dial-up internet to today's tech. My journey in computer science began in the early 2020s. Driven by curiosity, creativity, and problem-solving, I keep finding new ways to grow and challenge myself in this field.",
-                    experienceTitle: "Experience",
-                    experienceCurrent: "Present",
-                    experienceIntro: "My first work experience came thanks to Safety CLI Cybersecurity, a Canadian security company focused on protecting open-source ecosystems. When you run 'pip install django', you create a dependency that may or may not be affected. If you scan with Safety, it indicates which versions are secure. I'm usually one of the people responsible for verifying which versions are safe.",
-                    experienceRole2: "Junior Cybersecurity Researcher",
-                    experienceRole2Description: "I joined this company because cybersecurity is their main product. I believe the internet is still like cars in their early days: there weren't many laws, and accidents happened frequently. While we don't have viruses like in the 2000s, there's still lots of security work to be done. Although security often comes last, I had the opportunity to fast-track my journey and work in this field. I became part of the team reviewing vulnerabilities reported by open-source maintainers with security patches. I test potential vulnerability flaws in controlled environments to determine which library versions are secure. This has helped me understand the mechanics behind CVEs, how they're discovered, how bug bounties work, and which vulnerabilities make the OWASP top list each year. I'm grateful to have started my cybersecurity journey here!",
-                    experienceRole1: "Junior Software Developer",
-                    experienceRole1Description: "Before cybersecurity, I started with programming and never stopped – one thing leads to another! I landed my first job as a Django full-stack developer. Everyone said to focus on JavaScript for job opportunities, but I stubbornly stuck with Python because I loved it more. This worked out great as I got to work with what I enjoy! I started in front-end, diving deep into CSS with a fresh approach through TailwindCSS. When they began using low-code for front-end, I shifted to back-end and loved it even more. I worked on SEO ranking improvements, did lots of refactoring and testing to enhance the codebase (passionate dev stuff!), and made various optimizations. I learned a ton about working with third-party tech, like integrating Google products. And of course, I made many security improvements to our code. Software development is truly a never-ending adventure!",
-                    stackTitle: "Tech Stack",
-                    educationTitle: "Education",
-                    educationText1: "My path is a bit different from the usual. I started in the industry after immersing myself in a bootcamp, which helped me understand what a Software Developer's daily life would be like. This led me to discover cybersecurity.",
-                    educationText2: "I love how everything clicks when studying computer science while working in the field – it helps me bridge academia and industry. For my higher education, I'm studying Computer Systems at Fluminense Federal University (UFF), one of Brazil's renowned institutions.",
-                    educationText3: "I also enjoy following various learning resources and guides, such as:",
-                    whyTitle: "Why Brawling The Bits?",
-                    whyText: "I heard the phrase 'Bit bashing' and couldn't stop thinking about 'how do I interact with bits?' Then I remembered that my favorite type of games, since the oldest consoles, were beat 'em ups (also called brawlers). I realized my neurons have been fighting with bits for a long time! It's a mental battle – challenges transform us, and I need to keep growing. So, I simply enjoy brawling the bits!",
-                    contactTitle: "Contact",
-                    footer: "© 2025 Beatriz Costa"
-                },
-                'pt-br': {
-                    greeting: "Olá, como vai você?",
-                    intro: "Eu estou lutando com os bits!",
-                    aboutTitle: "Sobre mim",
-                    aboutText: "Sou a Beatriz. Nasci em 2000, geração Z, mas um pouco millenium. Peguei a época do Orkut e tive vários fakes, tive internet discada e já disse 'mãe, é minha vez de usar o PC. Sempre gostei muito de ficar na frente do computador, mas nunca imaginei que faria disso a minha profissão. Porém, sinto como se fosse feita para isso. Se eu estivesse no paleolítico, provavelmente seria uma nômade exploradora e, nas grandes navegações, desejaria conhecer continentes. Como nasci no século XXI, quero explorar a tecnologia.",
-                    experienceTitle: "Experiência",
-                    experienceCurrent: "Presente",
-                    experienceIntro: "Minha primeira experiência de trabalho aconteceu graças à Safety CLI Cybersecurity. A Safety é uma empresa canadense de segurança cujo principal objetivo é proteger ecossistemas de código aberto. Ao executar o comando `pip install django`, você cria uma dependência que pode estar afetada ou não. Se você fizer uma varredura com o Safety, ele indicará quais são as versões seguras. Geralmente, sou uma das pessoas responsáveis por verificar quais são as versões seguras.",
-                    experienceRole2: "Pesquisadora de Cibersegurança Júnior",
-                    experienceRole2Description: "Além disso, apliquei nesta empresa por ter a cibersegurança como produto principal. Eu acredito que a internet ainda é como os carros no início: não existiam muitas leis e muitos acidentes aconteciam. Embora nossa internet não tenha vírus como nos anos 2000, ainda temos muito trabalho de segurança a ser feito. Apesar de a segurança vir por último, tive a oportunidade de encurtar minha jornada e trabalhar com isso. Assim, comecei a fazer parte da equipe, revisando as vulnerabilidades reportadas pelos próprios mantenedores de open source com patches de segurança. Dessa forma, pude testar possíveis falhas de vulnerabilidade em ambientes controlados para determinar quais são as versões seguras de uma biblioteca. Dessa forma, pude conhecer um pouco da sistemática por trás dos CVEs, como são descobertos, como funcionam os bounties de bug, e quais são as vulnerabilidades mais populares por ano na OWASP. Felizmente, pude iniciar minha jornada na área de cibersegurança.",
-                    experienceRole1: "Desenvolvedora de Software Júnior",
-                    experienceRole1Description: "Antes da área de ciber segurança, eu comecei com programação e nunca parei, já que uma coisa leva a outra. Entrei no meu primeiro emprego como desenvolvedora full stack Django. Todo mundo dizia para eu focar no JavaScript, pois conseguiria emprego, mas eu fui teimosa, pois gostava mais de Python. Isso foi ótimo, porque realmente pude trabalhar com o que gosto, comecei pelo front-end, onde mexi muito em CSS, mas com outra abordagem, porque conheci o TailwindCSS. Depois que começaram a usar low-code no front-end, eu me concentrei no back-end e gostei ainda mais. Mexi no SEO para ranquear melhor, fiz várias refatorações e testes para melhorar a codebase (coisa de dev emocionado), fiz otimizações. Também aprendi muito a trabalhar com tecnologias de terceiros, como integrar os produtos do Google. Além disso, é claro, fiz muitas melhorias de segurança no nosso próprio código. Enfim, o desenvolvimento de software nunca acaba.",
-                    stackTitle: "Tecnologias",
-                    educationTitle: "Educação",
-                    educationText1: "Em 2018, aos 18 anos, passei no vestibular de química. Porém, por conta da pandemia, fiquei longe do laboratório, sem poder praticar, e percebi que aquilo não era para mim, pois eu morria de medo de me machucar com algum composto ou causar um acidente. Então, em 2021, em meio a muitas crises existenciais e a um relacionamento com meu PC parecido com o Plâncton do Bob Esponja, encontrei os bootcamps. Hoje tenho uma opinião diferente da que eu tinha na época, mas após minha aprovação, mergulhei por um ano numa rotina que me levou ao mercado de trabalho alguns meses depois.",
-                    educationText2: "Uma vez no mercado, decidi que precisaria aprender de fato sobre computação. Por isso, comecei a estudar as ciências da computação por conta própria, mas hoje em dia sou aluna da UFF (Universidade Federal Fluminense), onde faço o curso de tecnologia em sistemas de computação. Em suma, num mundo ideal, conheceríamos um pouco do mercado antes de escolhermos o que queremos estudar. Só tive essa oportunidade porque, em 2022, havia um boom de vagas de programação.",
-                    educationText3: "Gosto de como as peças se encaixam quando estudo ciência da computação enquanto trabalho na área, então sinto que posso alinhar a academia com o mercado. Também gosto de ser guiada por vários conteúdos e guias, como:",
-                    whyTitle: "Por que Brawling The Bits?",
-                    whyText: "Ouvi a expressão \"Bit bashing\" e não consegui parar de pensar por um tempo sobre 'como eu trato os bits'? Então, também lembrei que meu tipo favorito de jogo, desde os consoles mais antigos, eram os beat'em up que se chamam 'brawl'. Concluí que meus neurônios têm lutado com os bits há muito tempo. É uma batalha mental, os desafios nos transformam, e preciso estar em progresso. Então, eu simplesmente gosto de brawling the bits.",
-                    contactTitle: "Contato",
-                    footer: "© 2025 Beatriz Costa"
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const languageSelect = document.getElementById('language-select');
+            
+                // Load saved language preference
+                function loadPreferences() {
+                    const savedLang = localStorage.getItem('language') || 'en';
+                    languageSelect.value = savedLang;
+                    updateLanguage(savedLang);
                 }
-            };
-
-            function updateLanguage(lang) {
-                document.documentElement.lang = lang;
-                document.querySelectorAll('[data-translate]').forEach(element => {
-                    const key = element.getAttribute('data-translate');
-                    if (translations[lang] && translations[lang][key]) {
-                        element.innerHTML = translations[lang][key];
+            
+                const translations = {
+                    en: {
+                        greeting: "Hi, how are you?",
+                        intro: "I am brawling the bits!",
+                        aboutTitle: "About me",
+                        aboutText: "Hi! I'm Beatriz, born in 2000 – part Gen Z, part Millennial at heart. I grew up during the evolution of personal computing, from dial-up internet to today's tech. My journey in computer science began in the early 2020s. Driven by curiosity, creativity, and problem-solving, I keep finding new ways to grow and challenge myself in this field.",
+                        experienceTitle: "Experience",
+                        experienceCurrent: "Present",
+                        experienceIntro: "My first work experience came thanks to Safety CLI Cybersecurity, a Canadian security company focused on protecting open-source ecosystems. When you run 'pip install django', you create a dependency that may or may not be affected. If you scan with Safety, it indicates which versions are secure. I'm usually one of the people responsible for verifying which versions are safe.",
+                        experienceRole2: "Junior Cybersecurity Researcher",
+                        experienceRole2Description: "I joined this company because cybersecurity is their main product. I believe the internet is still like cars in their early days: there weren't many laws, and accidents happened frequently. While we don't have viruses like in the 2000s, there's still lots of security work to be done. Although security often comes last, I had the opportunity to fast-track my journey and work in this field. I became part of the team reviewing vulnerabilities reported by open-source maintainers with security patches. I test potential vulnerability flaws in controlled environments to determine which library versions are secure. This has helped me understand the mechanics behind CVEs, how they're discovered, how bug bounties work, and which vulnerabilities make the OWASP top list each year. I'm grateful to have started my cybersecurity journey here!",
+                        experienceRole1: "Junior Software Developer",
+                        experienceRole1Description: "Before cybersecurity, I started with programming and never stopped – one thing leads to another! I landed my first job as a Django full-stack developer. Everyone said to focus on JavaScript for job opportunities, but I stubbornly stuck with Python because I loved it more. This worked out great as I got to work with what I enjoy! I started in front-end, diving deep into CSS with a fresh approach through TailwindCSS. When they began using low-code for front-end, I shifted to back-end and loved it even more. I worked on SEO ranking improvements, did lots of refactoring and testing to enhance the codebase (passionate dev stuff!), and made various optimizations. I learned a ton about working with third-party tech, like integrating Google products. And of course, I made many security improvements to our code. Software development is truly a never-ending adventure!",
+                        stackTitle: "Tech Stack",
+                        educationTitle: "Education",
+                        educationText1: "My path is a bit different from the usual. I started in the industry after immersing myself in a bootcamp, which helped me understand what a Software Developer's daily life would be like. This led me to discover cybersecurity.",
+                        educationText2: "I love how everything clicks when studying computer science while working in the field – it helps me bridge academia and industry. For my higher education, I'm studying Computer Systems at Fluminense Federal University (UFF).",
+                        educationText3: "I also enjoy following various learning resources and guides, such as:",
+                        whyTitle: "Why Brawling The Bits?",
+                        whyText: "I heard the phrase 'Bit bashing' and couldn't stop thinking about 'how do I interact with bits?' Then I remembered that my favorite type of games, since the oldest consoles, were beat 'em ups (also called brawlers). I realized my neurons have been fighting with bits for a long time! It's a mental battle – challenges transform us, and I need to keep growing. So, I simply enjoy brawling the bits!",
+                        contactTitle: "Contact",
+                        footer: "© 2025 Beatriz Costa"
+                    },
+                    'pt-br': {
+                        greeting: "Olá, como vai você?",
+                        intro: "Eu estou lutando com os bits!",
+                        aboutTitle: "Sobre mim",
+                        aboutText: "Sou a Beatriz. Nasci em 2000, geração Z, mas um pouco millenium. Peguei a época do Orkut e tive vários fakes, tive internet discada e já disse 'mãe, é minha vez de usar o PC. Sempre gostei muito de ficar na frente do computador, mas nunca imaginei que faria disso a minha profissão. Porém, sinto como se fosse feita para isso. Se eu estivesse no paleolítico, provavelmente seria uma nômade exploradora e, nas grandes navegações, desejaria conhecer continentes. Como nasci no século XXI, quero explorar a tecnologia.",
+                        experienceTitle: "Experiência",
+                        experienceCurrent: "Presente",
+                        experienceIntro: "Minha primeira experiência de trabalho aconteceu graças à Safety CLI Cybersecurity. A Safety é uma empresa canadense de segurança cujo principal objetivo é proteger ecossistemas de código aberto. Ao executar o comando `pip install django`, você cria uma dependência que pode estar afetada ou não. Se você fizer uma varredura com o Safety, ele indicará quais são as versões seguras. Geralmente, sou uma das pessoas responsáveis por verificar quais são as versões seguras.",
+                        experienceRole2: "Pesquisadora de Cibersegurança Júnior",
+                        experienceRole2Description: "Além disso, apliquei nesta empresa por ter a cibersegurança como produto principal. Eu acredito que a internet ainda é como os carros no início: não existiam muitas leis e muitos acidentes aconteciam. Embora nossa internet não tenha vírus como nos anos 2000, ainda temos muito trabalho de segurança a ser feito. Apesar de a segurança vir por último, tive a oportunidade de encurtar minha jornada e trabalhar com isso. Assim, comecei a fazer parte da equipe, revisando as vulnerabilidades reportadas pelos próprios mantenedores de open source com patches de segurança. Dessa forma, pude testar possíveis falhas de vulnerabilidade em ambientes controlados para determinar quais são as versões seguras de uma biblioteca. Dessa forma, pude conhecer um pouco da sistemática por trás dos CVEs, como são descobertos, como funcionam os bounties de bug, e quais são as vulnerabilidades mais populares por ano na OWASP. Felizmente, pude iniciar minha jornada na área de cibersegurança.",
+                        experienceRole1: "Desenvolvedora de Software Júnior",
+                        experienceRole1Description: "Antes da área de ciber segurança, eu comecei com programação e nunca parei, já que uma coisa leva a outra. Entrei no meu primeiro emprego como desenvolvedora full stack Django. Todo mundo dizia para eu focar no JavaScript, pois conseguiria emprego, mas eu fui teimosa, pois gostava mais de Python. Isso foi ótimo, porque realmente pude trabalhar com o que gosto, comecei pelo front-end, onde mexi muito em CSS, mas com outra abordagem, porque conheci o TailwindCSS. Depois que começaram a usar low-code no front-end, eu me concentrei no back-end e gostei ainda mais. Mexi no SEO para ranquear melhor, fiz várias refatorações e testes para melhorar a codebase (coisa de dev emocionado), fiz otimizações. Também aprendi muito a trabalhar com tecnologias de terceiros, como integrar os produtos do Google. Além disso, é claro, fiz muitas melhorias de segurança no nosso próprio código. Enfim, o desenvolvimento de software nunca acaba.",
+                        stackTitle: "Tecnologias",
+                        educationTitle: "Educação",
+                        educationText1: "Em 2018, aos 18 anos, passei no vestibular de química. Porém, por conta da pandemia, fiquei longe do laboratório, sem poder praticar, e percebi que aquilo não era para mim, pois eu morria de medo de me machucar com algum composto ou causar um acidente. Então, em 2021, em meio a muitas crises existenciais e a um relacionamento com meu PC parecido com o Plâncton do Bob Esponja, encontrei os bootcamps. Hoje tenho uma opinião diferente da que eu tinha na época, mas após minha aprovação, mergulhei por um ano numa rotina que me levou ao mercado de trabalho alguns meses depois.",
+                        educationText2: "Uma vez no mercado, decidi que precisaria aprender de fato sobre computação. Por isso, comecei a estudar as ciências da computação por conta própria, mas hoje em dia sou aluna da UFF (Universidade Federal Fluminense), onde faço o curso de tecnologia em sistemas de computação. Em suma, num mundo ideal, conheceríamos um pouco do mercado antes de escolhermos o que queremos estudar. Só tive essa oportunidade porque, em 2022, havia um boom de vagas de programação.",
+                        educationText3: "Gosto de como as peças se encaixam quando estudo ciência da computação enquanto trabalho na área, então sinto que posso alinhar a academia com o mercado. Também gosto de ser guiada por vários conteúdos e guias, como:",
+                        whyTitle: "Por que Brawling The Bits?",
+                        whyText: "Ouvi a expressão \"Bit bashing\" e não consegui parar de pensar por um tempo sobre 'como eu trato os bits'? Então, também lembrei que meu tipo favorito de jogo, desde os consoles mais antigos, eram os beat'em up que se chamam 'brawl'. Concluí que meus neurônios têm lutado com os bits há muito tempo. É uma batalha mental, os desafios nos transformam, e preciso estar em progresso. Então, eu simplesmente gosto de brawling the bits.",
+                        contactTitle: "Contato",
+                        footer: "© 2025 Beatriz Costa"
                     }
+                };
+            
+                function updateLanguage(lang) {
+                    document.documentElement.lang = lang;
+                    document.querySelectorAll('[data-translate]').forEach(element => {
+                        const key = element.getAttribute('data-translate');
+                        if (translations[lang] && translations[lang][key]) {
+                            element.innerHTML = translations[lang][key];
+                        }
+                    });
+                    localStorage.setItem('language', lang);
+                }
+            
+                languageSelect.addEventListener('change', (e) => {
+                    updateLanguage(e.target.value);
                 });
-                localStorage.setItem('language', lang);
-            }
-
-            languageSelect.addEventListener('change', (e) => {
-                updateLanguage(e.target.value);
+            
+                // Load preferences on page load
+                loadPreferences();
             });
-
-            // Load preferences on page load
-            loadPreferences();
-        });
-    </script>
-</body>
+        </script>
+    </body>
 </html>
